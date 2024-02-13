@@ -5,40 +5,11 @@ ENV DEBIAN_FRONTEND noninteractive
 
 # Install essential build tools, GCC, GDB, and other necessary packages
 RUN apt-get update &&  \
-    apt-get install -y wget && \
-    apt-get install -y git \ 
-    apt-get install -y virtualbox \ 
-    apt-get install -y vagrant \
-    build-essential \
-    gcc \
-    g++ \
-    gdb \
-    make \
-    cmake \
-    valgrind \
-    cppcheck \
-    libncurses-dev \
-    libevent-dev \
-    doxygen \
-    graphviz \
-    stlink-tools \
-    # build tools for openocd
-    libhidapi-hidraw0 \
-    libusb-0.1-4 \
-    libusb-1.0-0 \
-    libhidapi-dev \
-    libusb-1.0-0-dev \
-    libusb-dev \
-    libtool \
-    automake \
-    pkg-config \
-    tclsh \
-    telnet \
-    openocd \ 
-    python3 \
-    bzip2 -y \
-    && apt-get clean && \
-    rm -rf /var/lib/apt/lists/*
+    apt-get install -y \
+    git \ 
+    virtualbox \ 
+    vagrant 
+
 
 # Install required dependencies
 #RUN apt-get update && \
