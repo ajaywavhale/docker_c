@@ -7,7 +7,7 @@ ENV DEBIAN_FRONTEND noninteractive
 RUN apt-get update &&  \
     apt-get install -y wget && \
     apt-get install -y git \ 
-    apt-get install -y VirtualBox \ 
+    apt-get install -y virtualbox \ 
     apt-get install -y vagrant
     build-essential \
     gcc \
