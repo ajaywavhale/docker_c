@@ -8,7 +8,7 @@ RUN apt-get update &&  \
     apt-get install -y wget && \
     apt-get install -y git \ 
     apt-get install -y virtualbox \ 
-    apt-get install -y vagrant
+    apt-get install -y vagrant \
     build-essential \
     gcc \
     g++ \
