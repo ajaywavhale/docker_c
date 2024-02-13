@@ -7,6 +7,8 @@ ENV DEBIAN_FRONTEND noninteractive
 RUN apt-get update &&  \
     apt-get install -y wget && \
     apt-get install -y git \ 
+    apt-get install -y VirtualBox \ 
+    apt-get install -y vagrant
     build-essential \
     gcc \
     g++ \
@@ -44,10 +46,10 @@ RUN apt-get update &&  \
 #    && rm -rf /var/lib/apt/lists/*
 
 # Install arm-none-eabi compiler
-RUN wget https://developer.arm.com/-/media/Files/downloads/gnu-rm/10.3-2021.10/gcc-arm-none-eabi-10.3-2021.10-x86_64-linux.tar.bz2
-RUN tar xf gcc-arm-none-eabi-10.3-2021.10-x86_64-linux.tar.bz2
-RUN cp -rf gcc-arm-none-eabi-10.3-2021.10/* /usr/local/
-RUN rm -rf gcc-arm-none-eabi-10.3-2021.10
+#RUN wget https://developer.arm.com/-/media/Files/downloads/gnu-rm/10.3-2021.10/gcc-arm-none-eabi-10.3-2021.10-x86_64-linux.tar.bz2
+#RUN tar xf gcc-arm-none-eabi-10.3-2021.10-x86_64-linux.tar.bz2
+#RUN cp -rf gcc-arm-none-eabi-10.3-2021.10/* /usr/local/
+#RUN rm -rf gcc-arm-none-eabi-10.3-2021.10
 
 # Download Miniforge installer
 RUN wget "https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-$(uname -s)-$(uname -m).sh" -O miniforge.sh
